@@ -60,6 +60,6 @@ void manage_rf_link()
   // Pokud z přijímače nepřišla žádná odpověď delší než 1 sekunda (1000 ms)
   if (millis() - signal_loss_timeout >= 1000) blink(PIN_LED, 100); // Krizový stav: LED bliká rychle (0.1 s)
   else if (low_batt_flag_rx) blink(PIN_LED, 300); // Vybitá baterie A1 nebo A2: LED bliká (0.3 s)
-  //else if (low_batt_flag_tx) blink(PIN_LED, 800); // Vybitá baterie vysílače: LED bliká (0.8 s)
+  else if (low_batt_flag_tx) blink(PIN_LED, 800); // Vybitá baterie vysílače: LED bliká (0.8 s)
   else digitalWrite(PIN_LED, HIGH); // Normální provoz: LED trvale svítí
 }
