@@ -65,7 +65,7 @@ void calibrate_reverse_pots()
     EEPROM.get(i * 6 + 2, mid_pots_calib[i]); // EEPROM locations 2,  8, 14, 20, 26, 32, 38
     EEPROM.get(i * 6 + 4, max_pots_calib[i]); // EEPROM locations 4, 10, 16, 22, 28, 34, 40
     
-    reverse[i] = EEPROM.read(i + 41) & 1;     // EEPROM locations 41, 42, 43, 44, 45, 46, 47
+    reverse[i] = EEPROM.read(i + 42) & 1;     // EEPROM locations 42, 43, 44, 45, 46, 47, 48
   }
   
   // Kontrola reverzace pák při startu (krajní poloha)
@@ -76,7 +76,7 @@ void calibrate_reverse_pots()
     if (pots_value[i] < MIN_CONTROL_VAL + 50 || pots_value[i] > MAX_CONTROL_VAL - 50)
     {
       reverse[i] ^= B00000001;
-      EEPROM.update(i + 41, reverse[i]);
+      EEPROM.update(i + 42, reverse[i]); // EEPROM locations 42, 43, 44, 45, 46, 47, 48
     }
   }
 }

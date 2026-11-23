@@ -127,14 +127,14 @@ void setup()
   pinMode(PIN_BATTERY, INPUT);
   pinMode(PIN_BTN_CALIB_FS, INPUT_PULLUP);
   
-  // Inicializace pole odesílaných dat na bezpečné středy
+  // Inicializace dat
   for (uint8_t i = 0; i < NUM_RC_CHANNELS; i++)
   {
     tx_data.rc_data[i] = 1500;
-    //pots_value[i] = 1500;
-    //min_pots_calib[i] = 0;
-    //mid_pots_calib[i] = 512;
-    //max_pots_calib[i] = 1023;
+    pots_value[i] = 1500;
+    min_pots_calib[i] = 1023;
+    mid_pots_calib[i] = 512;
+    max_pots_calib[i] = 0;
   }
   
   // Inicializace ovladače rádia
