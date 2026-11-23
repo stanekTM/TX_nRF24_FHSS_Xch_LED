@@ -11,19 +11,19 @@ void read_batt()
   
   /*
   // Pokud napětí přijímače A1 nebo A2 klesne, uzamkneme stav vybité baterie
-  if (rx_telemetry_data.batt_A1 <= (255.0 / RX_BATTERY_VOLTAGE) * RX_MONITORED_VOLTAGE)
+  if (rx_telemetry_data.batt_A1 <= (256.0 / RX_BATTERY_VOLTAGE) * RX_MONITORED_VOLTAGE)
   {
     low_batt_flag_rx = true;
   }
   
-  if (rx_telemetry_data.batt_A2 <= (255.0 / RX_BATTERY_VOLTAGE) * RX_MONITORED_VOLTAGE)
+  if (rx_telemetry_data.batt_A2 <= (256.0 / RX_BATTERY_VOLTAGE) * RX_MONITORED_VOLTAGE)
   {
     low_batt_flag_rx = true;
   }
   */
 
   // Pokud napětí přijímače A1 nebo A2 klesne, uzamkneme stav vybité baterie
-  uint8_t rx_batt_limit = (255.0 / RX_BATTERY_VOLTAGE) * RX_MONITORED_VOLTAGE;
+  uint8_t rx_batt_limit = (256.0 / RX_BATTERY_VOLTAGE) * RX_MONITORED_VOLTAGE;
 
   if (rx_telemetry_data.batt_A1 <= rx_batt_limit || rx_telemetry_data.batt_A2 <= rx_batt_limit)
   {
