@@ -5,7 +5,7 @@ void radio_init()
 {
   radio.begin();
   radio.setPALevel(RF24_PA_MIN); // Pro testy na stole stačí minimální výkon
-  radio.setDataRate(RF24_1MBPS);
+  radio.setDataRate(RF24_1MBPS); // Přenosová rychlost 1 Mbps (pro podporu novější generace nRF52)
   
   radio.setAutoAck(true); // Zapnutí automatického potvrzování paketů
   radio.setRetries(0, 0); // Vypnutí hardwarového opakování

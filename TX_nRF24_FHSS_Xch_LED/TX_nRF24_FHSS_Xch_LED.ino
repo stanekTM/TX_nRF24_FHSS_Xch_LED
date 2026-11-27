@@ -5,7 +5,7 @@ Simple RC transmitter with frequency hopping (FHSS) and telemetry (Auto-ACK Payl
 Code from my repository: https://github.com/stanekTM/TX_nRF24_FHSS_Xch_LED
 
 Rapid hopping between 4 strong RF channels (12, 40, 76, 88) outside the main WiFi frequencies.
-Transmission rate of 1 Mbps (increased for full support of the newer nRF52 generation).
+Transmission rate of 1 Mbps (for support of the newer nRF52 generation).
 Constant latency / period of 4.5 ms (222 Hz).
 RC channels from 2 to 7 with 16-bit resolution (1000–2000 us).
 Received telemetry indicates low receiver battery voltage A1(A2) and signal loss by flashing an LED.

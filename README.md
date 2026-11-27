@@ -5,7 +5,7 @@ Support for DIY RC receivers from this repository [**RX_nRF24_FHSS**](https://gi
 
 ## Features and functions
 * **FHSS** Rapid hopping between 4 strong RF channels (12, 40, 76, 88) outside the main WiFi frequencies.
-* **Transmission rate** 1 Mbps (for full support of the newer nRF52 generation).
+* **Transmission rate** 1 Mbps (for support of the newer nRF52 generation).
 * **Constant latency / period** 4.5 ms (222 Hz).
 * **RC channels** from 2 to 7 with 16-bit resolution (1000–2000 us).
 * **Telemetry / Status LED mode**
